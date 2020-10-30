@@ -1,0 +1,1038 @@
+{
+   "content": [
+      {
+         "field_id": "document_header",
+         "meta_tags": {
+            "disabled": false
+         },
+         "section_id": "document_heading",
+         "style": "documentHeading",
+         "text": "CREDIT NOTE"
+      },
+      {
+         "columns": [
+            {
+               "stack": [
+                  {
+                     "style": [
+                        "mb5"
+                     ],
+                     "text": [
+                        {
+                           "style": [
+                              "fontStyleBold"
+                           ],
+                           "text": "Invoice Date: "
+                        },
+                        {
+                           "text": "2020-9-18"
+                        }
+                     ]
+                  },
+                  {
+                     "style": [
+                        "mb5"
+                     ],
+                     "text": [
+                        {
+                           "style": [
+                              "fontStyleBold"
+                           ],
+                           "text": "Invoice No: "
+                        },
+                        {
+                           "text": "INL-35"
+                        }
+                     ]
+                  },
+                  {
+                     "style": [
+                        "mb5"
+                     ],
+                     "text": [
+                        {
+                           "style": [
+                              "fontStyleBold"
+                           ],
+                           "text": "Service Period: "
+                        },
+                        {
+                           "text": "2020-8-1 to 2020-9-1"
+                        }
+                     ]
+                  },
+                  {
+                     "style": [
+                        "mb5"
+                     ],
+                     "text": [
+                        {
+                           "style": [
+                              "fontStyleBold"
+                           ],
+                           "text": "Applicability of reverse charge: "
+                        },
+                        {
+                           "text": "N"
+                        }
+                     ]
+                  },
+                  {
+                     "style": [
+                        "mb5"
+                     ],
+                     "text": [
+                        {
+                           "style": [
+                              "fontStyleBold"
+                           ],
+                           "text": "IRN: "
+                        },
+                        {
+                           "text": "da9df139a44774792b229800430012237d85da79a0721efcbd2edda2c49733ff"
+                        }
+                     ]
+                  }
+               ],
+               "width": "auto"
+            },
+            {
+               "stack": [
+                  {
+                     "alignment": "right",
+                     "eccLevel": "L",
+                     "fit": 200,
+                     "qr": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkVEQzU3REUxMzU4QjMwMEJBOUY3OTM0MEE2Njk2ODMxRjNDODUwNDciLCJ0eXAiOiJKV1QiLCJ4NXQiOiI3Y1Y5NFRXTE1BdXA5NU5BcG1sb01mUElVRWMifQ.eyJkYXRhIjoie1wiU2VsbGVyR3N0aW5cIjpcIjI5QUFGQ0Q1ODYyUjAwMFwiLFwiQnV5ZXJHc3RpblwiOlwiMjRBQUZDRDU4NjJSMDA1XCIsXCJEb2NOb1wiOlwiSU5MLTM1XCIsXCJEb2NUeXBcIjpcIklOVlwiLFwiRG9jRHRcIjpcIjE4LzA5LzIwMjBcIixcIlRvdEludlZhbFwiOjExODAwMCxcIkl0ZW1DbnRcIjoxLFwiTWFpbkhzbkNvZGVcIjpcIjg3MDg5OTAwXCIsXCJJcm5cIjpcImRhOWRmMTM5YTQ0Nzc0NzkyYjIyOTgwMDQzMDAxMjIzN2Q4NWRhNzlhMDcyMWVmY2JkMmVkZGEyYzQ5NzMzZmZcIixcIklybkR0XCI6XCIyMDIwLTA5LTI1IDE1OjAxOjAwXCJ9IiwiaXNzIjoiTklDIn0.A5ocnZJRD-DB395r3X-mQ0-19E0XvR-1eq73ZNPPbDrih0QaQQuq4LT05NN7I4uEcrdAkOwgVxp3XK4wugYwRiME8n9Lhi8oVV9J4uM6vRz5zc6i8CQj-W9YDgnbqW-xLeCSi3LaibV5qMNyOMHadw_pileFM8nL_mzRetYr1JzCgzepCvglSiC5szJAmCRc1aZ9_ub8gZgsDPMfGgwDnS_iCO3peqgPLji9c2kzb4AkU-pqLVy6FwoyFfnt0KYVyUEFwUkp3XO2Gvmj4Q0kmMWbdA83RT1IoAVMJbBumJhngoLHs_80BsA2BtTDR7NYUjKGzcOjYPsxVAO8CLvH0Q"
+                  }
+               ],
+               "width": "*"
+            }
+         ],
+         "id": "invoice",
+         "style": [
+            "fontSize9",
+            "textAlignLeft",
+            "mb5"
+         ]
+      },
+      {
+         "id": "sellerbuyer",
+         "layout": "noBorders",
+         "style": [
+            "fontSize9",
+            "mb5"
+         ],
+         "table": {
+            "body": [
+               [
+                  [
+                     {
+                        "style": "sectionHeading",
+                        "text": "Details Of Supplier: "
+                     },
+                     {
+                        "layout": "noBorders",
+                        "table": {
+                           "body": [
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Name: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "Seller Legal Name"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "PAN: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "AAFCD5862R"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Address: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "Seller Address 1\n Seller Address 23"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "City: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "Seller location"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "State Name: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "Uttar Pradesh"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "State Code: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "09"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Pin Code: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "560027"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "GSTIN: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "29AAFCD5862R000"
+                                 }
+                              ]
+                           ],
+                           "widths": [
+                              50,
+                              "*"
+                           ]
+                        }
+                     }
+                  ],
+                  [
+                     {
+                        "style": "sectionHeading",
+                        "text": "Details of Customer (Bill to): "
+                     },
+                     {
+                        "layout": "noBorders",
+                        "table": {
+                           "body": [
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Name: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "XYZ company pvt ltd"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "PAN: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "<buyerdtls.pan>"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Address: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "7th block, kuvempu layout\nkuvempu layout"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "City: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "GANDHINAGAR"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "State Name: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "<buyerdtls.statename>"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "State Code: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "24"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "Pin Code: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "382020"
+                                 }
+                              ],
+                              [
+                                 {
+                                    "field_id": "supplier_name_label",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "style": "fontStyleBold",
+                                    "text": "GSTIN: "
+                                 },
+                                 {
+                                    "field_id": "supplier_name_value",
+                                    "meta_tags": {
+                                       "disabled": false
+                                    },
+                                    "section_id": "invoice_details",
+                                    "text": "24AAFCD5862R005"
+                                 }
+                              ]
+                           ],
+                           "widths": [
+                              50,
+                              "*"
+                           ]
+                        }
+                     }
+                  ]
+               ]
+            ],
+            "widths": "*"
+         }
+      },
+      {
+         "id": "section_line_item",
+         "no_of_headers": 2,
+         "style": [
+            "itemListTable"
+         ],
+         "table": {
+            "body": [
+               [
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Sr No."
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Description of Goods/Service"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "HSN Code/SAC"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Qty."
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Unit"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Rate (per item)"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Total"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Discount"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Taxable Value"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "GST"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Central Tax"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "State/UT Tax"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Integrated Tax"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Other Charges"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Total Value"
+                  }
+               ],
+               [
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Rate\n%"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  },
+                  {
+                     "style": [
+                        "itemListTableHeader"
+                     ],
+                     "text": "Amt\n₹"
+                  }
+               ],
+               [
+                  {
+                     "style": [ ],
+                     "text": "23"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3ML DISPOVAN SYRINGES WITH NEEDLES 0.60*25 (  23G )"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "9018"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "2000"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "NOS"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3360"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3360"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "12"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "202"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "202"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3764"
+                  }
+               ],
+               [
+                  {
+                     "style": [ ],
+                     "text": "2"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3ML DISPOVAN SYRINGES WITH NEEDLES 0.60*25 (  23G )"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "9018"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "2000"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "NOS"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3360"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3360"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "12"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "202"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "202"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "0"
+                  },
+                  {
+                     "style": [ ],
+                     "text": "3764"
+                  }
+               ]
+            ],
+            "headerRows": 2,
+            "widths": [
+               "3.5%",
+               "16%",
+               "6%",
+               "6%",
+               "6%",
+               "6%",
+               "6%",
+               "8.5%",
+               "8%",
+               "6%",
+               "7%",
+               "6%",
+               "7%",
+               "6%",
+               "9%"
+            ]
+         }
+      },
+      {
+         "columns": [
+            {
+               "stack": [
+                  [
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Credit the payment to our bank account: "
+                           },
+                           {
+                              "text": ""
+                           }
+                        ]
+                     },
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Payment Instructions: "
+                           },
+                           {
+                              "text": ""
+                           }
+                        ]
+                     },
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Beneficiary Name: "
+                           },
+                           {
+                              "text": "ABCDE"
+                           }
+                        ]
+                     },
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Beneficiary Account: "
+                           },
+                           {
+                              "text": ""
+                           }
+                        ]
+                     },
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Beneficiary Bank IFSC Code: "
+                           },
+                           {
+                              "text": ""
+                           }
+                        ]
+                     },
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "Payment Advice E-mail Address: "
+                           },
+                           {
+                              "text": "abc@gmail.com"
+                           }
+                        ]
+                     }
+                  ],
+                  [
+                     {
+                        "style": [
+                           "mb5"
+                        ],
+                        "text": [
+                           {
+                              "style": [ ],
+                              "text": "\n\nTerms & Conditions: \n Invoice is valid if digitally signed: "
+                           },
+                           {
+                              "text": ""
+                           }
+                        ]
+                     }
+                  ]
+               ],
+               "style": [
+                  "fontSize8",
+                  "textAlignLeft"
+               ]
+            },
+            {
+               "stack": [
+                  {
+                     "text": "Seller Legal Name"
+                  },
+                  {
+                     "margin": [
+                        0,
+                        0,
+                        0,
+                        30
+                     ],
+                     "text": ""
+                  },
+                  {
+                     "text": "Authorized Signatory"
+                  }
+               ],
+               "style": "signature"
+            }
+         ]
+      }
+   ],
+   "defaultStyle": {
+      "columnGap": 20
+   },
+   "info": {
+      "author": "ClearTax",
+      "creator": "ClearTax",
+      "keywords": "ClearTax",
+      "producer": "ClearTax",
+      "subject": "ClearTax",
+      "title": "E-Invoice"
+   },
+   "pageMargins": [
+      40,
+      40,
+      40,
+      40
+   ],
+   "pageOrientation": "portrait",
+   "pageSize": "A4",
+   "styles": {
+      "documentCopy": {
+         "alignment": "right",
+         "fontSize": 12
+      },
+      "documentHeading": {
+         "alignment": "center",
+         "bold": true,
+         "decoration": "underline",
+         "fontSize": 16,
+         "margin": [
+            0,
+            0,
+            0,
+            20
+         ]
+      },
+      "fontSize8": {
+         "fontSize": 8
+      },
+      "fontSize9": {
+         "fontSize": 9
+      },
+      "fontStyleBold": {
+         "bold": true
+      },
+      "itemListTable": {
+         "color": "black",
+         "fontSize": 6,
+         "margin": [
+            0,
+            5,
+            0,
+            15
+         ]
+      },
+      "itemListTableHeader": {
+         "alignment": "center",
+         "bold": true,
+         "color": "black",
+         "fillColor": "#cccccc",
+         "fontSize": 8
+      },
+      "mb5": {
+         "margin": [
+            0,
+            0,
+            0,
+            5
+         ]
+      },
+      "sectionHeading": {
+         "bold": true,
+         "fontSize": 10,
+         "margin": [
+            0,
+            0,
+            0,
+            5
+         ]
+      },
+      "signature": {
+         "alignment": "right",
+         "bold": true,
+         "fontSize": 10,
+         "margin": [
+            0,
+            70,
+            0,
+            0
+         ]
+      },
+      "textAlignLeft": {
+         "alignment": "left"
+      }
+   }
+}
