@@ -1,6 +1,6 @@
 {
   docHeader(field_id, disabled_val, text_val)::{
-    section_id: 'document_heading',
+    section_id: 'heading',
     field_id: field_id,
     meta_tags: {
       disabled: disabled_val,
@@ -8,14 +8,16 @@
     style: 'documentHeading',
     text: text_val,
   },
-  columnField(label_val, field_val, bold_labels=true)::{
+  columnField(field_id, disabled_val, label_val, field_val, bold_text=true)::{
+    section_id: 'column_field',
+    field_id: field_id,
+    meta_tags: {
+      disabled: disabled_val,
+    },
     text: [
       {
-        text: label_val + ': ',
-        style: if bold_labels then ['fontStyleBold'] else [],
-      },
-      {
-        text: field_val,
+        text: label_val + ': ' + field_val,
+        style: if bold_text then ['fontStyleBold'] else [],
       },
     ],
     style: [
@@ -55,7 +57,7 @@
                   [
                     {
                       section_id: 'invoice_details',
-                      field_id: 'supplier_name_label',
+                      field_id: y.field_id,
                       meta_tags: {
                         disabled: y.disabled,
                       },
@@ -64,12 +66,12 @@
                     },
                     {
                       section_id: 'invoice_details',
-                      field_id: 'supplier_name_value',
+                      field_id: y.field_id,
                       meta_tags: {
                         disabled: y.disabled,
                       },
-                      text: y.value,
-                    },
+                      text: y.value
+                    }
                   ]
                   for y in x.details
                 ],

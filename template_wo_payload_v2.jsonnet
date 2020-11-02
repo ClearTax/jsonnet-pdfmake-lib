@@ -1,33 +1,47 @@
 local template_type = 'E-Invoice';
 local author = 'ClearTax';
 local template_margin = 40;
-local payload = import './payload/1.json';
 local utils = import 'utils.libsonnet';
+local top_left_fields = [
+  {field_id: 'invoice_date', disabled: false, label: 'Invoice Date', mapping: '<docdtls.dt>', bold_text: true},
+  {field_id: 'invoice_no', disabled: false, label: 'Invoice No', mapping: '<docdtls.no>', bold_text: true},
+  {field_id: 'service_period', disabled: false, label: 'Service Period', mapping: '<refdtls.docperddtls.invstdt>', bold_text: true},
+  {field_id: 'rev_reg', disabled: false, label: 'Applicability of reverse charge', mapping: '<trandtls.regrev>', bold_text: true},
+  {field_id: 'irn', disabled: false, label: 'IRN', mapping: '<govt_response.irn>', bold_text: true},
+];
+local bottom_left_fields = [
+  {field_id: 'bank_instr', disabled: false, label: 'Credit the payment to our bank account', mapping: '', bold_text: false},
+  {field_id: 'paymt_instr', disabled: false, label: 'Payment Instructions', mapping: '', bold_text: false},
+  {field_id: 'benf_name', disabled: false, label: 'Beneficiary Name', mapping: '', bold_text: false},
+  {field_id: 'benf_acct', disabled: false, label: 'Beneficiary Account', mapping: '', bold_text: false},
+  {field_id: 'benf_ifsc', disabled: false, label: 'Beneficiary Bank IFSC Code', mapping: '', bold_text: false},
+  {field_id: 'paymt_email', disabled: false, label: 'Payment Advice E-mail Address', mapping: '<sellerdtls.em>', bold_text: false},
+];
 local buyerSupplierDetails = [
   {
     sectionHeader: 'Details Of Supplier',
     details: [
-      { label: 'Name', value: 'Seller Legal Name', disabled: false },
-      { label: 'PAN', value: 'AAFCD5862R', disabled: false },
-      { label: 'Address', value: 'Seller Address 1\n Seller Address 23', disabled: false },
-      { label: 'City', value: 'Seller location', disabled: false },
-      { label: 'State Name', value: 'Uttar Pradesh', disabled: false },
-      { label: 'State Code', value: '09', disabled: false },
-      { label: 'Pin Code', value: '560027', disabled: false },
-      { label: 'GSTIN', value: '29AAFCD5862R000', disabled: false },
+      { field_id: 'supplier_name', label: 'Name', value: 'Seller Legal Name', disabled: false },
+      { field_id: 'supplier_pan', label: 'PAN', value: 'AAFCD5862R', disabled: false },
+      { field_id: 'supplier_addr', label: 'Address', value: 'Seller Address 1\n Seller Address 23', disabled: false },
+      { field_id: 'supplier_city', label: 'City', value: 'Seller location', disabled: false },
+      { field_id: 'supplier_state', label: 'State Name', value: 'Uttar Pradesh', disabled: false },
+      { field_id: 'supplier_state_code', label: 'State Code', value: '09', disabled: false },
+      { field_id: 'supplier_pin_code', label: 'Pin Code', value: '560027', disabled: false },
+      { field_id: 'supplier_gstin', label: 'GSTIN', value: '29AAFCD5862R000', disabled: false },
     ],
   },
   {
     sectionHeader: 'Details of Customer (Bill to)',
     details: [
-      { label: 'Name', value: 'XYZ company pvt ltd', disabled: false },
-      { label: 'PAN', value: '<buyerdtls.pan>', disabled: false },
-      { label: 'Address', value: '7th block, kuvempu layout\nkuvempu layout', disabled: false },
-      { label: 'City', value: 'GANDHINAGAR', disabled: false },
-      { label: 'State Name', value: '<buyerdtls.statename>', disabled: false },
-      { label: 'State Code', value: '24', disabled: false },
-      { label: 'Pin Code', value: '382020', disabled: false },
-      { label: 'GSTIN', value: '24AAFCD5862R005', disabled: false },
+      { field_id: 'customer_name', label: 'Name', value: 'XYZ company pvt ltd', disabled: false },
+      { field_id: 'customer_pan', label: 'PAN', value: '<buyerdtls.pan>', disabled: false },
+      { field_id: 'customer_addr', label: 'Address', value: '7th block, kuvempu layout\nkuvempu layout', disabled: false },
+      { field_id: 'customer_city', label: 'City', value: 'GANDHINAGAR', disabled: false },
+      { field_id: 'customer_state', label: 'State Name', value: '<buyerdtls.statename>', disabled: false },
+      { field_id: 'customer_state_code', label: 'State Code', value: '24', disabled: false },
+      { field_id: 'customer_pin_code', label: 'Pin Code', value: '382020', disabled: false },
+      { field_id: 'customer_gstin', label: 'GSTIN', value: '24AAFCD5862R005', disabled: false },
     ],
   },
 ];
@@ -133,42 +147,38 @@ local itemListDetails = {
   pageSize: 'A4',
   pageOrientation: 'portrait',
   pageMargins: [
-    template_margin,
-    template_margin,
-    template_margin,
-    template_margin,
+      template_margin,
+      template_margin,
+      template_margin,
+      template_margin,
   ],
   content: [
-    utils.docHeader('document_header', false, 'CREDIT NOTE'),
-    {
-      id: 'invoice',
-      style: [
-        'fontSize9',
-        'textAlignLeft',
-        'mb5',
-      ],
-      columns: [
-        {
-          width: 'auto',
-          stack: [
-            utils.columnField('invoice_date', false, 'Invoice Date', std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.DocDtls.Dt))),
-            utils.columnField('invoice_no', false, 'Invoice No', payload.documentData.invoice.transaction.DocDtls.No),
-            utils.columnField('service_period', false, 'Service Period', std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.RefDtls.DocPerdDtls.InvStDt)) + ' to ' + std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.RefDtls.DocPerdDtls.InvEndDt))),
-            utils.columnField('rev_reg', false, 'Applicability of reverse charge', payload.documentData.invoice.transaction.TranDtls.RegRev),
-            utils.columnField('irn', false, 'IRN', payload.documentData.invoice.govt_response.Irn),
-          ],
-        },
-        {
-          width: '*',
-          stack: [
-            utils.qrCode(200, 'right', payload.documentData.invoice.govt_response.SignedQRCode),
-          ],
-        },
-      ],
-    },
-    utils.genDetailsTable('sellerbuyer', 'noBorders', buyerSupplierDetails),
-    utils.genItemListTable(2, itemListDetails),
-    {
+      utils.docHeader('document_header', false, 'CREDIT NOTE'),
+      {
+        id: 'invoice',
+        style: [
+          'fontSize9',
+          'textAlignLeft',
+          'mb5',
+        ],
+        columns: [
+            {
+            width: 'auto',
+            stack: [
+                utils.columnField(x.field_id, x.disabled, x.label, x.mapping, x.bold_text) for x in top_left_fields
+            ],
+          },
+          {
+            width: '*',
+            stack: [
+              utils.qrCode(200, 'right', '<govt_response.signedqrcode>'),
+            ],
+          },
+        ],
+      },
+      utils.genDetailsTable('sellerbuyer', 'noBorders', buyerSupplierDetails),
+      utils.genItemListTable(2, itemListDetails),
+      {
       columns: [
         {
           style: [
@@ -177,12 +187,7 @@ local itemListDetails = {
           ],
           stack: [
             [
-              utils.columnField('bank_instr', false, 'Credit the payment to our bank account', '', false),
-              utils.columnField('paymt_instr', false, 'Payment Instructions', '', false),
-              utils.columnField('benf_name', false, 'Beneficiary Name', 'ABCDE', false),
-              utils.columnField('benf_acct', false, 'Beneficiary Account', '', false),
-              utils.columnField('benf_ifsc', false, 'Beneficiary Bank IFSC Code', '', false),
-              utils.columnField('paymt_email', false, 'Payment Advice E-mail Address', payload.documentData.invoice.transaction.SellerDtls.Em, false),
+              utils.columnField(x.field_id, x.disabled, x.label, x.mapping, x.bold_text) for x in bottom_left_fields
             ],
             [
               utils.columnField('terms_extra', false, '\n\nTerms & Conditions: \n Invoice is valid if digitally signed', '', false),
@@ -191,7 +196,7 @@ local itemListDetails = {
         },
         utils.signatureBlock('Seller Legal Name', '', 'Authorized Signatory'),
       ],
-    },
+      },
   ],
   styles: {
     documentCopy: {

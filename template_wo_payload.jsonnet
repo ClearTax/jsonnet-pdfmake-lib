@@ -1,33 +1,32 @@
 local template_type = 'E-Invoice';
 local author = 'ClearTax';
 local template_margin = 40;
-local payload = import './payload/1.json';
 local utils = import 'utils.libsonnet';
 local buyerSupplierDetails = [
   {
     sectionHeader: 'Details Of Supplier',
     details: [
-      { label: 'Name', value: 'Seller Legal Name', disabled: false },
-      { label: 'PAN', value: 'AAFCD5862R', disabled: false },
-      { label: 'Address', value: 'Seller Address 1\n Seller Address 23', disabled: false },
-      { label: 'City', value: 'Seller location', disabled: false },
-      { label: 'State Name', value: 'Uttar Pradesh', disabled: false },
-      { label: 'State Code', value: '09', disabled: false },
-      { label: 'Pin Code', value: '560027', disabled: false },
-      { label: 'GSTIN', value: '29AAFCD5862R000', disabled: false },
+      { field_id: 'supplier_name', label: 'Name', value: 'Seller Legal Name', disabled: false },
+      { field_id: 'supplier_pan', label: 'PAN', value: 'AAFCD5862R', disabled: false },
+      { field_id: 'supplier_addr', label: 'Address', value: 'Seller Address 1\n Seller Address 23', disabled: false },
+      { field_id: 'supplier_city', label: 'City', value: 'Seller location', disabled: false },
+      { field_id: 'supplier_state', label: 'State Name', value: 'Uttar Pradesh', disabled: false },
+      { field_id: 'supplier_state_code', label: 'State Code', value: '09', disabled: false },
+      { field_id: 'supplier_pin_code', label: 'Pin Code', value: '560027', disabled: false },
+      { field_id: 'supplier_gstin', label: 'GSTIN', value: '29AAFCD5862R000', disabled: false },
     ],
   },
   {
     sectionHeader: 'Details of Customer (Bill to)',
     details: [
-      { label: 'Name', value: 'XYZ company pvt ltd', disabled: false },
-      { label: 'PAN', value: '<buyerdtls.pan>', disabled: false },
-      { label: 'Address', value: '7th block, kuvempu layout\nkuvempu layout', disabled: false },
-      { label: 'City', value: 'GANDHINAGAR', disabled: false },
-      { label: 'State Name', value: '<buyerdtls.statename>', disabled: false },
-      { label: 'State Code', value: '24', disabled: false },
-      { label: 'Pin Code', value: '382020', disabled: false },
-      { label: 'GSTIN', value: '24AAFCD5862R005', disabled: false },
+      { field_id: 'customer_name', label: 'Name', value: 'XYZ company pvt ltd', disabled: false },
+      { field_id: 'customer_pan', label: 'PAN', value: '<buyerdtls.pan>', disabled: false },
+      { field_id: 'customer_addr', label: 'Address', value: '7th block, kuvempu layout\nkuvempu layout', disabled: false },
+      { field_id: 'customer_city', label: 'City', value: 'GANDHINAGAR', disabled: false },
+      { field_id: 'customer_state', label: 'State Name', value: '<buyerdtls.statename>', disabled: false },
+      { field_id: 'customer_state_code', label: 'State Code', value: '24', disabled: false },
+      { field_id: 'customer_pin_code', label: 'Pin Code', value: '382020', disabled: false },
+      { field_id: 'customer_gstin', label: 'GSTIN', value: '24AAFCD5862R005', disabled: false },
     ],
   },
 ];
@@ -151,17 +150,17 @@ local itemListDetails = {
         {
           width: 'auto',
           stack: [
-            utils.columnField('invoice_date', false, 'Invoice Date', std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.DocDtls.Dt))),
-            utils.columnField('invoice_no', false, 'Invoice No', payload.documentData.invoice.transaction.DocDtls.No),
-            utils.columnField('service_period', false, 'Service Period', std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.RefDtls.DocPerdDtls.InvStDt)) + ' to ' + std.join('-', std.map(std.toString, payload.documentData.invoice.transaction.RefDtls.DocPerdDtls.InvEndDt))),
-            utils.columnField('rev_reg', false, 'Applicability of reverse charge', payload.documentData.invoice.transaction.TranDtls.RegRev),
-            utils.columnField('irn', false, 'IRN', payload.documentData.invoice.govt_response.Irn),
+            utils.columnField('invoice_date', false, 'Invoice Date', '<docdtls.dt>'),
+            utils.columnField('invoice_no', false, 'Invoice No', '<docdtls.no>'),
+            utils.columnField('service_period', false, 'Service Period', '<refdtls.docperddtls.invstdt>'),
+            utils.columnField('rev_reg', false, 'Applicability of reverse charge', '<trandtls.regrev>'),
+            utils.columnField('irn', false, 'IRN', '<govt_response.irn>'),
           ],
         },
         {
           width: '*',
           stack: [
-            utils.qrCode(200, 'right', payload.documentData.invoice.govt_response.SignedQRCode),
+            utils.qrCode(200, 'right', '<govt_response.signedqrcode>'),
           ],
         },
       ],
@@ -182,7 +181,7 @@ local itemListDetails = {
               utils.columnField('benf_name', false, 'Beneficiary Name', 'ABCDE', false),
               utils.columnField('benf_acct', false, 'Beneficiary Account', '', false),
               utils.columnField('benf_ifsc', false, 'Beneficiary Bank IFSC Code', '', false),
-              utils.columnField('paymt_email', false, 'Payment Advice E-mail Address', payload.documentData.invoice.transaction.SellerDtls.Em, false),
+              utils.columnField('paymt_email', false, 'Payment Advice E-mail Address', '<sellerdtls.em>', false),
             ],
             [
               utils.columnField('terms_extra', false, '\n\nTerms & Conditions: \n Invoice is valid if digitally signed', '', false),

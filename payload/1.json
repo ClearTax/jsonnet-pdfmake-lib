@@ -83,7 +83,8 @@
             "Pin": 560027,
             "Stcd": "9",
             "Ph": "9000000000",
-            "Em": "abc@gmail.com"
+            "Em": "abc@gmail.com",
+            "Pan": "AADDFF542D"
           },
           "BuyerDtls": {
             "Gstin": "24AAFCD5862R005",
@@ -96,7 +97,8 @@
             "Pin": 382020,
             "Stcd": "24",
             "Ph": "91111111111",
-            "Em": "xyz@yahoo.com"
+            "Em": "xyz@yahoo.com",
+            "Pan": "AAFCD5862R"
           },
           "DispDtls": {
             "Nm": "ABC company pvt ltd",

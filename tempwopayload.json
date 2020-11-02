@@ -5,7 +5,7 @@
          "meta_tags": {
             "disabled": false
          },
-         "section_id": "document_heading",
+         "section_id": "heading",
          "style": "documentHeading",
          "text": "CREDIT NOTE"
       },
@@ -27,7 +27,7 @@
                            "style": [
                               "fontStyleBold"
                            ],
-                           "text": "Invoice Date: 2020-9-18"
+                           "text": "Invoice Date: <docdtls.dt>"
                         }
                      ]
                   },
@@ -45,7 +45,7 @@
                            "style": [
                               "fontStyleBold"
                            ],
-                           "text": "Invoice No: INL-35"
+                           "text": "Invoice No: <docdtls.no>"
                         }
                      ]
                   },
@@ -63,7 +63,7 @@
                            "style": [
                               "fontStyleBold"
                            ],
-                           "text": "Service Period: 2020-8-1 to 2020-9-1"
+                           "text": "Service Period: <refdtls.docperddtls.invstdt>"
                         }
                      ]
                   },
@@ -81,7 +81,7 @@
                            "style": [
                               "fontStyleBold"
                            ],
-                           "text": "Applicability of reverse charge: N"
+                           "text": "Applicability of reverse charge: <trandtls.regrev>"
                         }
                      ]
                   },
@@ -99,7 +99,7 @@
                            "style": [
                               "fontStyleBold"
                            ],
-                           "text": "IRN: da9df139a44774792b229800430012237d85da79a0721efcbd2edda2c49733ff"
+                           "text": "IRN: <govt_response.irn>"
                         }
                      ]
                   }
@@ -112,7 +112,7 @@
                      "alignment": "right",
                      "eccLevel": "L",
                      "fit": 200,
-                     "qr": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkVEQzU3REUxMzU4QjMwMEJBOUY3OTM0MEE2Njk2ODMxRjNDODUwNDciLCJ0eXAiOiJKV1QiLCJ4NXQiOiI3Y1Y5NFRXTE1BdXA5NU5BcG1sb01mUElVRWMifQ.eyJkYXRhIjoie1wiU2VsbGVyR3N0aW5cIjpcIjI5QUFGQ0Q1ODYyUjAwMFwiLFwiQnV5ZXJHc3RpblwiOlwiMjRBQUZDRDU4NjJSMDA1XCIsXCJEb2NOb1wiOlwiSU5MLTM1XCIsXCJEb2NUeXBcIjpcIklOVlwiLFwiRG9jRHRcIjpcIjE4LzA5LzIwMjBcIixcIlRvdEludlZhbFwiOjExODAwMCxcIkl0ZW1DbnRcIjoxLFwiTWFpbkhzbkNvZGVcIjpcIjg3MDg5OTAwXCIsXCJJcm5cIjpcImRhOWRmMTM5YTQ0Nzc0NzkyYjIyOTgwMDQzMDAxMjIzN2Q4NWRhNzlhMDcyMWVmY2JkMmVkZGEyYzQ5NzMzZmZcIixcIklybkR0XCI6XCIyMDIwLTA5LTI1IDE1OjAxOjAwXCJ9IiwiaXNzIjoiTklDIn0.A5ocnZJRD-DB395r3X-mQ0-19E0XvR-1eq73ZNPPbDrih0QaQQuq4LT05NN7I4uEcrdAkOwgVxp3XK4wugYwRiME8n9Lhi8oVV9J4uM6vRz5zc6i8CQj-W9YDgnbqW-xLeCSi3LaibV5qMNyOMHadw_pileFM8nL_mzRetYr1JzCgzepCvglSiC5szJAmCRc1aZ9_ub8gZgsDPMfGgwDnS_iCO3peqgPLji9c2kzb4AkU-pqLVy6FwoyFfnt0KYVyUEFwUkp3XO2Gvmj4Q0kmMWbdA83RT1IoAVMJbBumJhngoLHs_80BsA2BtTDR7NYUjKGzcOjYPsxVAO8CLvH0Q"
+                     "qr": "<govt_response.signedqrcode>"
                   }
                ],
                "width": "*"
@@ -146,7 +146,7 @@
                            "body": [
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_name",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -155,7 +155,7 @@
                                     "text": "Name: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_name",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -165,7 +165,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_pan",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -174,7 +174,7 @@
                                     "text": "PAN: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_pan",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -184,7 +184,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_addr",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -193,7 +193,7 @@
                                     "text": "Address: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_addr",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -203,7 +203,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_city",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -212,7 +212,7 @@
                                     "text": "City: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_city",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -222,7 +222,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_state",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -231,7 +231,7 @@
                                     "text": "State Name: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_state",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -241,7 +241,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_state_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -250,7 +250,7 @@
                                     "text": "State Code: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_state_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -260,7 +260,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_pin_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -269,7 +269,7 @@
                                     "text": "Pin Code: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_pin_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -279,7 +279,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "supplier_gstin",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -288,7 +288,7 @@
                                     "text": "GSTIN: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "supplier_gstin",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -315,7 +315,7 @@
                            "body": [
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_name",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -324,7 +324,7 @@
                                     "text": "Name: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_name",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -334,7 +334,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_pan",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -343,7 +343,7 @@
                                     "text": "PAN: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_pan",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -353,7 +353,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_addr",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -362,7 +362,7 @@
                                     "text": "Address: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_addr",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -372,7 +372,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_city",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -381,7 +381,7 @@
                                     "text": "City: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_city",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -391,7 +391,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_state",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -400,7 +400,7 @@
                                     "text": "State Name: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_state",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -410,7 +410,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_state_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -419,7 +419,7 @@
                                     "text": "State Code: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_state_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -429,7 +429,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_pin_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -438,7 +438,7 @@
                                     "text": "Pin Code: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_pin_code",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -448,7 +448,7 @@
                               ],
                               [
                                  {
-                                    "field_id": "supplier_name_label",
+                                    "field_id": "customer_gstin",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -457,7 +457,7 @@
                                     "text": "GSTIN: "
                                  },
                                  {
-                                    "field_id": "supplier_name_value",
+                                    "field_id": "customer_gstin",
                                     "meta_tags": {
                                        "disabled": false
                                     },
@@ -912,7 +912,7 @@
                         "text": [
                            {
                               "style": [ ],
-                              "text": "Payment Advice E-mail Address: abc@gmail.com"
+                              "text": "Payment Advice E-mail Address: <sellerdtls.em>"
                            }
                         ]
                      }
